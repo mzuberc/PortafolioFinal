@@ -1,4 +1,4 @@
-/* ---media--- */
+/* ---media---
 
 /* Pantalla Large (>=992px)
 */ 
@@ -16,9 +16,9 @@
     .col-lg-2{width: 16.66666667%;}
     .col-lg-1{width: 8.33333333%;}
 }
-/*
-    Pantalla Medium (>=768px)
-   */
+
+    /* Pantalla Medium (>=768px) */
+
 @media(min-width:768px) and (max-width:991px){
     .col-md-12{width: 100%;}
     .col-md-11{width: 91.66666667%;}
@@ -66,36 +66,124 @@
     .col-xs-3{width: 25%;}
     .col-xs-2{width: 16.66666667%;}
     .col-xs-1{width: 8.33333333%;}
-}
+} 
 
 
 
 
 /* ---main---- */
 
-.fondo{
-    background-image:url("portada.jpeg");
-    height: 100vh;
-    background-position:-250px;
-    background-repeat: no-repeat;
-    background-size:cover;
+@media (min-width:320px) {
+    .fondo {
+        background-image:url("../img/portada.jpeg");
+        height: 100vh;
+        background-position:0;
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+    .alert-secondary{
+        background: rgb(221,226,229);
+        background: linear-gradient(90deg, rgba(221,226,229,0.5569196428571428) 35%, rgba(221,226,229,0.42648486024844723) 100%);
+        border: solid 1px black;
+        height: 90px;
+        font-size: x-small;
+    
+    }
+    .profile-pic{
+        height: 180px;
+        width: 180px;
+        object-fit:cover;
+        object-position: 0px -20px;
+        border-radius: 50%;
+        border: 2px solid #000;
+    }
+    .proyectos-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-.profile-pic{
-    height: 250px;
-    width: 250px;
-    object-fit:cover;
-    object-position: 0px -20px;
-    border-radius: 50%;
-    border: 2px solid #000;
+@media (min-width:768px) and (max-width:991px){
+    .fondo {
+        background-image:url("../img/portada.jpeg");
+        height: 50vh;
+        background-position:0;
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+    .alert-secondary{
+        background: rgb(221,226,229);
+        background: linear-gradient(90deg, rgba(221,226,229,0.5569196428571428) 35%, rgba(221,226,229,0.42648486024844723) 100%);
+        border: solid 1px black;
+        height: 90px;
+        font-size: medium;
+    
+    }
+    .profile-pic{
+        height: 200px;
+        width: 200px;
+        object-fit:cover;
+        object-position: 0px -20px;
+        border-radius: 50%;
+        border: 2px solid #000;
+    }
+    .proyectos-content{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+    }
 }
 
-.alert-secondary{
-    background: rgb(221,226,229);
-    background: linear-gradient(90deg, rgba(221,226,229,0.5569196428571428) 35%, rgba(221,226,229,0.42648486024844723) 100%);
-    border: solid 1px black;
+@media(min-width:992px){
+    .fondo {
+        background-image:url("../img/portada.jpeg");
+        height: 35vh;
+        background-position: 0px;
+        background-repeat: no-repeat;
+        background-size:cover;        
+    }
+    .alert-secondary{
+        background: rgb(221,226,229);
+        background: linear-gradient(90deg, rgba(221,226,229,0.5569196428571428) 35%, rgba(221,226,229,0.42648486024844723) 100%);
+        border: solid 1px black;
+        height: 90px;
+        font-size:large;
+    }
+    .profile-pic{
+        height: 220px;
+        width: 220px;
+        object-fit:cover;
+        object-position: 0px -20px;
+        border-radius: 50%;
+        border: 2px solid #000;
+    }
+    .proyectos-content{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+    }
+}
+
+.container .home {
+    height: 450px;
     
 }
+
+.home-content{
+    height: 450px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 
 
 /* ---about--- */
@@ -108,7 +196,7 @@
     padding: 1rem 2rem;
     margin-bottom: 1rem;
     margin-right: 1.5rem;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     background: rgba(153, 153, 153, 0.2);
     border-radius: 5px;
     font-weight: 200;
